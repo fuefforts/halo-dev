@@ -1,2 +1,0 @@
-# halo-dev
-halo-theme

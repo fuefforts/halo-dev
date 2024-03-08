@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" th:fragment="html (title,hero,content,head,footer,sidebar,contentClass)">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2" />
+    <title th:text="${title}"></title>
+    <link rel="stylesheet" th:href="@{/assets/css/index.css}">
+    <link rel="stylesheet" th:href="@{/assets/css/swiper.css}">
+    <script th:src="@{/assets/dist/main.iife.js?v={version}(version=${theme.spec.version})}"></script>
+    <th:block th:if="${head != null}">
+      <th:block th:replace="${head}" />
+    </th:block>
+    <script>
+    //   main.initColorScheme("[[${theme.config.style.color_scheme}]]",[[${theme.config.style.enable_change_color_scheme}]])
+    </script>
+  </head>
+  <body class="bg-slate-50 dark:bg-slate-900">
+    <th:block th:replace="~{modules/header}" />
+    <th:block th:replace="~{modules/swiper}"></th:block>
+  </body>
+  <script th:src="@{/assets/js/swiper.js}" type=""></script>
+
+</html>

@@ -1,0 +1,70 @@
+
+.on{
+    width: 40px;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.2);
+    margin-left: 20px;
+}
+.banner-imgBox-div{
+    width: 25rem;
+    position: absolute;
+    bottom: 5.65rem;
+    left: 40%;
+    display: flex;
+}
+.on2{
+    background-color: #fff;
+}
+.banner-imgBox-left{
+    position: absolute;
+    left: 20px;
+    top:48%;
+    width: 48px;
+    height: 48px;
+}
+.banner-imgBox-right{
+    position: absolute;
+    right: 20px;
+    top:48%;
+    width: 48px;
+    height: 48px;
+    margin-right: 0;
+}
+
+.banner-info{
+    position: absolute;
+    
+}
+.swpiper-title{
+    height: 4.1875rem;
+    font-family: MicrosoftYaHeiLight;
+    font-size: 3.125rem;
+    color: #FFFFFF;
+    line-height: 4.1875rem;;
+    font-style: normal;
+    margin-bottom: 1.5rem;
+}
+.swpiper-desc,.swpiper-time{
+    height:1.5rem;
+    font-family: MicrosoftYaHeiLight;
+    font-size: 1.125rem;
+    color: #FFFFFF;
+    line-height:1.5rem;
+    font-style: normal;
+    margin-bottom: 1rem;
+}
+.swpiper-time{
+
+margin-bottom: 1.625rem;
+}
+.button{
+    width: 11.25rem;
+height: 2.5rem;
+font-size: 1.125rem;
+background: linear-gradient( 270deg, #F2982C 0%, #DE783A 100%);
+border-radius: 4px;
+color: #fff;
+display: flex;
+justify-content: center;
+align-items: center;
+}
