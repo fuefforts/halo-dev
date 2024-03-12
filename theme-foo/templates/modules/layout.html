@@ -7,6 +7,9 @@
     <title th:text="${title}"></title>
     <link rel="stylesheet" th:href="@{/assets/css/index.css}">
     <link rel="stylesheet" th:href="@{/assets/css/swiper.css}">
+<!-- 引入样式 -->
+<!-- <link rel="stylesheet" th:href="@{/assets/css/elementui.css}"> -->
+   <script th:src="@{/assets/js/main.js}"></script>
     <script th:src="@{/assets/dist/main.iife.js?v={version}(version=${theme.spec.version})}"></script>
     <th:block th:if="${head != null}">
       <th:block th:replace="${head}" />
@@ -15,10 +18,19 @@
     //   main.initColorScheme("[[${theme.config.style.color_scheme}]]",[[${theme.config.style.enable_change_color_scheme}]])
     </script>
   </head>
-  <body class="bg-slate-50 dark:bg-slate-900">
-    <th:block th:replace="~{modules/header}" />
-    <th:block th:replace="~{modules/swiper}"></th:block>
+  <body  class="bg-slate-50 dark:bg-slate-900">
+    <div id="app">
+      <th:block th:replace="~{modules/header}" />
+      <th:block th:replace="~{modules/swiper}"></th:block>
+      <th:block th:replace="~{modules/content}"></th:block>
+  </div>
   </body>
   <script th:src="@{/assets/js/swiper.js}" type=""></script>
+   
+   <!-- 必须先引入vue  后使用element-ui -->
+   <!-- <script th:src="@{/assets/js/vue.js}"></script> -->
+
+   <!-- 引入组件库 -->
+   <!-- <script th:src="@{/assets/js/element.js}"></script> -->
 
 </html>

@@ -19,7 +19,12 @@ var myClearInterval = function(key) {
     delete timeWorker[key];
   }
 }
-    var time=4000;
+    
+
+var interval =null;
+
+    function run(){
+        var time=4000;
     let content = document.querySelector('.banner-imgBox2');
     let switchBtn = document.querySelector('.banner-imgBox-div');
     let widths = content.clientWidth;
@@ -59,7 +64,7 @@ var myClearInterval = function(key) {
     }
 
 
-    var interval =mySetInterval(()=>{
+    mySetInterval(()=>{
         marginLeft(true)
     },time)
 
@@ -81,3 +86,13 @@ var myClearInterval = function(key) {
             marginLeft(true)
         },time)
     }
+   
+    }
+
+    run()
+
+    window.addEventListener("resize",function(){
+        console.log(1);
+        myClearInterval(interval);
+        run()
+    })
